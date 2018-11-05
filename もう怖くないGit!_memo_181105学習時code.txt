@@ -1,0 +1,633 @@
+﻿
+WARNING: Found ~/.bashrc but no ~/.bash_profile, ~/.bash_login or ~/.profile.
+
+This looks like an incorrect setup.
+A ~/.bash_profile that loads ~/.bashrc will be created for you.
+bash: ﻿alias: command not found
+
+Tomori kengo@DM-1801141 MINGW32 ~ (master)
+$ cd Documents
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents (master)
+$ mkdir udemy_code
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents (master)
+$ cd udemy_code
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code (master)
+$ mkdir git_tutorial
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code (master)
+$ cd git_tutorial
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git init
+Initialized empty Git repository in C:/Users/Tomori kengo/Documents/udemy_code/g                           it_tutorial/.git/
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ ls -a
+./  ../  .git/
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ ls .git/
+config  description  HEAD  hooks/  info/  objects/  refs/
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ cd ..
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code (master)
+$ git clone https://github.com/atom/atom.git
+Cloning into 'atom'...
+remote: Enumerating objects: 35, done.
+remote: Counting objects: 100% (35/35), done.
+remote: Compressing objects: 100% (19/19), done.
+remote: Total 191847 (delta 21), reused 21 (delta 16), pack-reused 191812
+Receiving objects: 100% (191847/191847), 296.66 MiB | 5.18 MiB/s, done.
+Resolving deltas: 100% (136329/136329), done.
+Checking out files: 100% (1169/1169), done.
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code (master)
+$ cd atom
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/atom (master)
+$ ls -a
+./                 CHANGELOG.md        package-lock.json
+../                CODE_OF_CONDUCT.md  packages/
+.coffeelintignore  coffeelint.json     PULL_REQUEST_TEMPLATE.md
+.git/              CONTRIBUTING.md     README.md
+.gitattributes     Dockerfile          resources/
+.github/           docs/               script/
+.gitignore         dot-atom/           spec/
+.python-version    exports/            src/
+.travis.yml        ISSUE_TEMPLATE.md   static/
+apm/               keymaps/            stylelint.config.js
+appveyor.yml       LICENSE.md          SUPPORT.md
+atom.sh*           menus/              vendor/
+benchmarks/        package.json
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/atom (master)
+$
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/atom (master)
+$ cd ..
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code (master)
+$ cd git_tutorial
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ ls
+index.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git add .
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git commit
+[master (root-commit) bad2f2d] initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git add index.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   index.html
+
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git commit
+[master 47447a6] git statusコマンドを追記
+ 1 file changed, 1 insertion(+)
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git diff
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git diff
+diff --git a/index.html b/index.html
+index a66864d..47028db 100644
+--- a/index.html
++++ b/index.html
+@@ -1,2 +1,3 @@
+ <h1>Gitチュートリアル</h1>
+ <p>git status</p>
++<p>git diff</p>
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git add index.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git diff
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git diff --staged
+diff --git a/index.html b/index.html
+index a66864d..47028db 100644
+--- a/index.html
++++ b/index.html
+@@ -1,2 +1,3 @@
+ <h1>Gitチュートリアル</h1>
+ <p>git status</p>
++<p>git diff</p>
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git commit
+[master babc44b] git diffを追記
+ 1 file changed, 1 insertion(+)
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git diff
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git diff --staged
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git log
+commit babc44bda33dd779f7b3c417a4d6a099cb68a14c (HEAD -> master)
+Author: k.tomori <k.tomori@datumstudio.jp>
+Date:   Mon Nov 5 15:07:05 2018 +0900
+
+    git diffを追記
+
+commit 47447a6d4700c7b8a192b918876e3779344d6f45
+Author: k.tomori <k.tomori@datumstudio.jp>
+Date:   Mon Nov 5 14:58:33 2018 +0900
+
+    git statusコマンドを追記
+
+commit bad2f2dbc1a094703ad696b23525b079250f457e
+Author: k.tomori <k.tomori@datumstudio.jp>
+Date:   Mon Nov 5 14:53:05 2018 +0900
+
+    initial commit
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ ls
+index.html
+
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git rm index.html
+rm 'index.html'
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ ls
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    index.html
+
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git reset HEAD index.html
+Unstaged changes after reset:
+D       index.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git checkout index.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ ls
+index.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git rm --cached index.html
+rm 'index.html'
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ ls
+index.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index.html
+
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git reset HEAD index.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ ls
+index.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git mv index.html index2.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ ls
+index2.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        renamed:    index.html -> index2.html
+
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git mv index2.html index.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ ls
+index.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git remote add origin https://github.com/hwpwk/git_tutorial.git
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git push -u origin master
+Counting objects: 9, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (9/9), 776 bytes | 258.00 KiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/hwpwk/git_tutorial/pull/new/master
+remote:
+To https://github.com/hwpwk/git_tutorial.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ touch secret.txt
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ ls
+index.html  secret.txt
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        secret.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git add .
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git commit
+[master cf18886] ,gitignoreファイルを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git checkout -- index.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git diff
+diff --git a/index.html b/index.html
+index 47028db..96e6e77 100644
+--- a/index.html
++++ b/index.html
+@@ -1,3 +1,4 @@
+ <h1>Gitチュートリアル</h1>
+ <p>git status</p>
+ <p>git diff</p>
++<p>git reset</p>
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git add .
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   index.html
+
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git reset HEAD index.html
+Unstaged changes after reset:
+M       index.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git checkout -- index.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git add .
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git commit
+[master 58bb143] git commit --amendを追記
+ 1 file changed, 2 insertions(+)
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git add .
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   index.html
+
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   index.html
+
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git commit --amend
+[master b65df00] git commit --amendを追記
+ Date: Mon Nov 5 17:38:49 2018 +0900
+ 1 file changed, 2 insertions(+)
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git log
+commit b65df0005347498428cf77ba18f13162942c0566 (HEAD -> master)
+Author: k.tomori <k.tomori@datumstudio.jp>
+Date:   Mon Nov 5 17:38:49 2018 +0900
+
+    git commit --amendを追記
+
+commit cf188865d46895c048af2caccc4c7f842d4bfa43
+Author: k.tomori <k.tomori@datumstudio.jp>
+Date:   Mon Nov 5 16:57:03 2018 +0900
+
+    ,gitignoreファイルを追加
+
+commit babc44bda33dd779f7b3c417a4d6a099cb68a14c (origin/master)
+Author: k.tomori <k.tomori@datumstudio.jp>
+Date:   Mon Nov 5 15:07:05 2018 +0900
+
+    git diffを追記
+
+commit 47447a6d4700c7b8a192b918876e3779344d6f45
+Author: k.tomori <k.tomori@datumstudio.jp>
+Date:   Mon Nov 5 14:58:33 2018 +0900
+
+    git statusコマンドを追記
+
+commit bad2f2dbc1a094703ad696b23525b079250f457e
+Author: k.tomori <k.tomori@datumstudio.jp>
+Date:   Mon Nov 5 14:53:05 2018 +0900
+
+    initial commit
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git log -p -n 1
+commit b65df0005347498428cf77ba18f13162942c0566 (HEAD -> master)
+Author: k.tomori <k.tomori@datumstudio.jp>
+Date:   Mon Nov 5 17:38:49 2018 +0900
+
+    git commit --amendを追記
+
+diff --git a/index.html b/index.html
+index 47028db..a4aa899 100644
+--- a/index.html
++++ b/index.html
+@@ -1,3 +1,5 @@
+ <h1>Gitチュートリアル</h1>
+ <p>git status</p>
+ <p>git diff</p>
++<p>git reset</p>
++<p>git commit --amend</p>
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git push origin master
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 679 bytes | 339.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/hwpwk/git_tutorial.git
+   babc44b..b65df00  master -> master
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git remote
+origin
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git remote -v
+origin  https://github.com/hwpwk/git_tutorial.git (fetch)
+origin  https://github.com/hwpwk/git_tutorial.git (push)
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        "\343\202\202\343\201\206\346\200\226\343\201\217\343\201\252\343\201\204Git!_memo_181105\345\255\246\347\277\222\346\231\202.txt"
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git add .
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git commit
+[master a8540d2] 181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ
+ 1 file changed, 38 insertions(+)
+ create mode 100644 "\343\202\202\343\201\206\346\200\226\343\201\217\343\201\252\343\201\204Git!_memo_181105\345\255\246\347\277\222\346\231\202.txt"
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.18 KiB | 1.18 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/hwpwk/git_tutorial.git
+   b65df00..a8540d2  master -> master
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$
