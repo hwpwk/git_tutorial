@@ -1,0 +1,130 @@
+﻿bash: ﻿alias: command not found
+
+Tomori kengo@DM-1801141 MINGW32 ~ (master)
+$ cd Documents
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents (master)
+$ cd udemy_code
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code (master)
+$ cd git_tutorial
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git fetch origin
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/hwpwk/git_tutorial
+   accc273..dce6f27  master     -> origin/master
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git branch -a
+* master
+  remotes/origin/master
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git checkout remotes/origin/master
+Note: checking out 'remotes/origin/master'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at dce6f27 Create home.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial ((dce6f27...))
+$ ls
+ home.html   'もう怖くないGit!_memo_181105学習時.txt'
+ index.html  'もう怖くないGit!_memo_181105学習時code.txt'
+ secret.txt
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial ((dce6f27...))
+$ cat home.html
+<p>home</p>
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial ((dce6f27...))
+$ git checkout master
+Previous HEAD position was dce6f27 Create home.html
+Switched to branch 'master'
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ ls
+ index.html  'もう怖くないGit!_memo_181105学習時.txt'
+ secret.txt  'もう怖くないGit!_memo_181105学習時code.txt'
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git merge origin/master
+Updating accc273..dce6f27
+Fast-forward
+ home.html | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 home.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ ls
+ home.html   'もう怖くないGit!_memo_181105学習時.txt'
+ index.html  'もう怖くないGit!_memo_181105学習時code.txt'
+ secret.txt
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git pull origin/master
+fatal: 'origin/master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/hwpwk/git_tutorial
+ * branch            master     -> FETCH_HEAD
+   dce6f27..25ef6fc  master     -> origin/master
+Updating dce6f27..25ef6fc
+Fast-forward
+ home.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ ls
+ home.html   'もう怖くないGit!_memo_181105学習時.txt'
+ index.html  'もう怖くないGit!_memo_181105学習時code.txt'
+ secret.txt
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ cat home.html
+<p>home</p>
+<p></p>
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/hwpwk/git_tutorial.git
+  Push  URL: https://github.com/hwpwk/git_tutorial.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git remote
+origin
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$
