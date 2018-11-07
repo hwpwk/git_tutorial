@@ -1,0 +1,430 @@
+﻿bash: ﻿alias: command not found
+
+Tomori kengo@DM-1801141 MINGW32 ~ (master)
+$ cd Documents
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents (master)
+$ cd udemy_code
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code (master)
+$ cd git_tutorial
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git branch
+* master
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git branch feature
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git branch
+  feature
+* master
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git log --oneline --decorate
+9a7db1a (HEAD -> master, origin/master, feature) 181106 git学習コード履:歴
+25ef6fc Update home.html
+dce6f27 Create home.html
+accc273 181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴
+a8540d2 181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ
+b65df00 git commit --amendを追記
+cf18886 ,gitignoreファイルを追加
+babc44b git diffを追記
+47447a6 git statusコマンドを追記
+bad2f2d initial commit
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (feature)
+$ git branch
+* feature
+  master
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (feature)
+$ git status
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        feature.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (feature)
+$ git add .
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (feature)
+$ git commit
+[feature 385ee10] featureファイルを新規追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (feature)
+$ ls
+ feature.html  'もう怖くないGit!_memo_181105学習時.txt'
+ home.html     'もう怖くないGit!_memo_181105学習時code.txt'
+ index.html    'もう怖くないGit!_memo_181106学習時code.txt'
+ secret.txt
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (feature)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git branch
+  feature
+* master
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ ls
+ home.html   'もう怖くないGit!_memo_181105学習時.txt'
+ index.html  'もう怖くないGit!_memo_181105学習時code.txt'
+ secret.txt  'もう怖くないGit!_memo_181106学習時code.txt'
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        master.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ ls
+ home.html    'もう怖くないGit!_memo_181105学習時.txt'
+ index.html   'もう怖くないGit!_memo_181105学習時code.txt'
+ master.html  'もう怖くないGit!_memo_181106学習時code.txt'
+ secret.txt
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git add master.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git commit
+[master 76e7f6e] master.htmlファイルを新規作成
+ 1 file changed, 1 insertion(+)
+ create mode 100644 master.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 324 bytes | 324.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/hwpwk/git_tutorial.git
+   9a7db1a..76e7f6e  master -> master
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (feature)
+$ git push origin feature
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 323 bytes | 323.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'feature' on GitHub by visiting:
+remote:      https://github.com/hwpwk/git_tutorial/pull/new/feature
+remote:
+To https://github.com/hwpwk/git_tutorial.git
+ * [new branch]      feature -> feature
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (feature)
+$ ls
+ feature.html  'もう怖くないGit!_memo_181105学習時.txt'
+ home.html     'もう怖くないGit!_memo_181105学習時code.txt'
+ index.html    'もう怖くないGit!_memo_181106学習時code.txt'
+ secret.txt
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (feature)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/hwpwk/git_tutorial
+ * branch            master     -> FETCH_HEAD
+   76e7f6e..b9e3e60  master     -> origin/master
+Updating 76e7f6e..b9e3e60
+Fast-forward
+ index.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ cat index.html
+<h1>Gitチュートリアル</h1>
+<p>git status</p>
+<p>git diff</p>
+<p>git reset</p>
+<p>git commit --amend</p>
+<p>git merge</p>
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git log --oneline
+b9e3e60 (HEAD -> master, origin/master) git mergeを追記
+76e7f6e master.htmlファイルを新規作成
+9a7db1a 181106 git学習コード履:歴
+25ef6fc Update home.html
+dce6f27 Create home.html
+accc273 181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴
+a8540d2 181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ
+b65df00 git commit --amendを追記
+cf18886 ,gitignoreファイルを追加
+babc44b git diffを追記
+47447a6 git statusコマンドを追記
+bad2f2d initial commit
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git branch
+  feature
+* master
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (feature)
+$ git add feature.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (feature)
+$ git commit
+[feature ef2ea14] featureを追記
+ 1 file changed, 1 insertion(+)
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (feature)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git merge feature
+Merge made by the 'recursive' strategy.
+ feature.html | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 feature.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ ls
+ feature.html   secret.txt
+ home.html     'もう怖くないGit!_memo_181105学習時.txt'
+ index.html    'もう怖くないGit!_memo_181105学習時code.txt'
+ master.html   'もう怖くないGit!_memo_181106学習時code.txt'
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ cat feature.html
+<p>branch</p>
+<p>feature</p>
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git log --oneline
+1695b88 (HEAD -> master) Merge branch 'feature'
+ef2ea14 (feature) featureを追記
+b9e3e60 (origin/master) git mergeを追記
+76e7f6e master.htmlファイルを新規作成
+385ee10 (origin/feature) featureファイルを新規追加
+9a7db1a 181106 git学習コード履:歴
+25ef6fc Update home.html
+dce6f27 Create home.html
+accc273 181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴
+a8540d2 181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ
+b65df00 git commit --amendを追記
+cf18886 ,gitignoreファイルを追加
+babc44b git diffを追記
+47447a6 git statusコマンドを追記
+bad2f2d initial commit
+ ESCOC
+
+
+
+を新規追加
+
+
+
+ git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 >
+学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点 >
+
+
+
+
+
+~
+~
+~
+~
+~
+~
+~
+~
+~
+ ESCOD
+ef2ea14 (feature) featureを追記
+b9e3e60 (origin/master) git mergeを追記
+76e7f6e master.htmlファイルを新規作成
+385ee10 (origin/feature) featureファイルを新規追加
+9a7db1a 181106 git学習コード履:歴
+25ef6fc Update home.html
+dce6f27 Create home.html
+accc273 181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴
+a8540d2 181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ
+b65df00 git commit --amendを追記
+cf18886 ,gitignoreファイルを追加
+babc44b git diffを追記
+47447a6 git statusコマンドを追記
+bad2f2d initial commit
+ ESCOD
+ef2ea14 (feature) featureを追記
+b9e3e60 (origin/master) git mergeを追記
+76e7f6e master.htmlファイルを新規作成
+385ee10 (origin/feature) featureファイルを新規追加
+9a7db1a 181106 git学習コード履:歴
+25ef6fc Update home.html
+dce6f27 Create home.html
+accc273 181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴
+a8540d2 181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ
+b65df00 git commit --amendを追記
+cf18886 ,gitignoreファイルを追加
+babc44b git diffを追記
+47447a6 git statusコマンドを追記
+bad2f2d initial commit
+ ESCOD
+ef2ea14 (feature) featureを追記
+b9e3e60 (origin/master) git mergeを追記
+76e7f6e master.htmlファイルを新規作成
+385ee10 (origin/feature) featureファイルを新規追加
+9a7db1a 181106 git学習コード履:歴
+25ef6fc Update home.html
+dce6f27 Create home.html
+accc273 181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴
+a8540d2 181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ
+b65df00 git commit --amendを追記
+cf18886 ,gitignoreファイルを追加
+babc44b git diffを追記
+47447a6 git statusコマンドを追記
+bad2f2d initial commit
+ ESCOD
+1695b88 (HEAD -> master) Merge branch 'feature'
+ef2ea14 (feature) featureを追記
+b9e3e60 (origin/master) git mergeを追記
+76e7f6e master.htmlファイルを新規作成
+385ee10 (origin/feature) featureファイルを新規追加
+9a7db1a 181106 git学習コード履:歴
+25ef6fc Update home.html
+dce6f27 Create home.html
+accc273 181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴181105 git実行コマンド履歴
+a8540d2 181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ181105時点の学習メモ
+b65df00 git commit --amendを追記
+cf18886 ,gitignoreファイルを追加
+babc44b git diffを追記
+47447a6 git statusコマンドを追記
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git add index.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git commit
+[master 5ceeb22] コンフリクトを追記
+ 1 file changed, 1 insertion(+)
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (feature)
+$ git add index.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (feature)
+$ git commit
+[feature 907b30c] conflictを追記
+ 1 file changed, 1 insertion(+)
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (feature)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$ git merge feature
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master|MERGING)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master|MERGING)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master|MERGING)
+$ git add index.html
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master|MERGING)
+$ git commit
+hint: Waiting for your editor to close the file...
+[最後の変更が保存されていません]
+/usr/bin/bash: wq: command not found
+
+シェルが値を返しました 127
+
+続けるにはENTERを押すかコマンドを入力してください
+[master b0edabb] Merge branch 'feature'
+
+Tomori kengo@DM-1801141 MINGW32 ~/Documents/udemy_code/git_tutorial (master)
+$
